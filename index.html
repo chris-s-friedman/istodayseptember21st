@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-<title>Is today the 21st of September?</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
-<meta name="author" content="Chris Friedman">
-<meta name="description" content="Figure out if it's the 21st of September.">
-<meta property="og:title" content="Is today the 21st of September?" />
-<meta property="og:description" content="Figure out if it's the 21st of September." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://istodayseptember21st.com" />
-<meta property="og:image" content="android-chrome-512x512.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <title>Is today the 21st of September?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="author" content="Chris Friedman">
+    <meta name="description" content="Figure out if it's the 21st of September.">
+    <meta property="og:title" content="Is today the 21st of September?" />
+    <meta property="og:description" content="Figure out if it's the 21st of September." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://istodayseptember21st.com" />
+    <meta property="og:image" content="android-chrome-512x512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <!-- <script src="video.js"></script> -->
 </head>
+
 <body>
-<h1>Is today the 21st of September?</h1>
-<div id="answer"><h2 class="big">NO!</h2></div>
+    <h1>Is today the 21st of September?</h1>
+    <div id="answer">
+        <h2 class="big">NO!</h2>
+    </div>
 
-<footer>&copy;2023 <a href="https://chris-s-friedman.com/">Chris Friedman</a></footer>
+    <footer>&copy;2023 <a href="https://chris-s-friedman.com/">Chris Friedman</a></footer>
 
-<script>
+    <script>
 
-var today = new Date();
+        var today = new Date();
 
-if (today.getMonth() == 8 && today.getDate() == 21) {
+        if (today.getMonth() == 8 && today.getDate() == 21) {
 
-const answer_elem = document.getElementById('answer')
-answer_elem.innerHTML="<h2 class='big'>YES!</h2>";
-const sept_iframe = document.createElement("iframe")
-sept_iframe.width="100%"
-sept_iframe.height="56.25%"
-sept_iframe.src='https://www.youtube-nocookie.com/embed/Gs069dndIYk?controls=0&autoplay=1'
-sept_iframe.title = 'YouTube video player' 
-sept_iframe.frameBorder='0'
-sept_iframe.allowFullscreen
+            const answer_elem = document.getElementById('answer')
+            answer_elem.innerHTML = "<h2 class='big'>YES!</h2>";
+            const sept_iframe = document.createElement("iframe")
+            // sept_iframe.position = "fixed"
+            // sept_iframe.right = "0"
+            // sept_iframe.bottom = "0"
+            // sept_iframe.min_width = "100%"
+            // sept_iframe.min_height = "100%"
+            sept_iframe.width = "100vw"
+            sept_iframe.height = "100vh"
+            sept_iframe.id = "video"
+            sept_iframe.src = 'https://www.youtube-nocookie.com/embed/Gs069dndIYk?controls=0&autoplay=1'
+            sept_iframe.title = 'YouTube video player'
+            sept_iframe.frameBorder = '0'
+            sept_iframe.allowFullscreen
 
 
-answer_elem.insertAdjacentElement('afterend', sept_iframe)
-}
-</script>
+            answer_elem.insertAdjacentElement('afterend', sept_iframe)
+        }
+    </script>
 </body>
+
 </html>
